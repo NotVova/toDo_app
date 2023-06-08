@@ -1,0 +1,64 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    <main>
+        <aside>
+            <div class="aside-menu-block">
+                <ul class="aside-menu">
+                    <li><a href="{% url "objectives" %}">Активные задачи</a></li>
+                    <li><a href="{% url "completed" %}">Выполненные задачи</a></li>
+                </ul>
+            </div>
+        </aside>
+        <section class="obj-block">
+            <h2>Активные задачи</h2>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-primary" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% for obj in objs %}
+                <article class="obj">
+                    {% csrf_token %}
+                        {% if obj.value == red %}
+                            <div class="obj-point-red">
+                                <ul class="obj-point">
+                                    <li><h3>{{ obj.value }} задача</h3></li>
+                                    <li><p>| {{ obj.objective }}</p></li>
+                                    <li><a class="submit-obj" href="{% url "obj_completed" obj.id %}">
+                                            Подтвердить выполнение
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% elif obj.value == orange %}
+                            <div class="obj-point-orange">
+                                <ul class="obj-point">
+                                    <li><h3>{{ obj.value }} задача</h3></li>
+                                    <li><p>| {{ obj.objective }}</p></li>
+                                    <li><a class="submit-obj" href="{% url "obj_completed" obj.id %}">
+                                            Подтвердить выполнение
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% elif obj.value == green %}
+                            <div class="obj-point-green">
+                                <ul class="obj-point">
+                                    <li><h3>{{ obj.value }} задача</h3></li>
+                                    <li><p>| {{ obj.objective }}</p></li>
+                                    <li><a class="submit-obj" href="{% url "obj_completed" obj.id %}">
+                                            Подтвердить выполнение
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </form>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}

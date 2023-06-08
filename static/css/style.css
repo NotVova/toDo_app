@@ -1,0 +1,157 @@
+/* Header */
+
+body {
+    margin: 0;
+    background: #744e99;
+}
+
+#wrapper {
+    max-width: 1920px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    padding: 0 50px;
+}
+
+.top-menu-block {
+    display: flex;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    margin: auto;
+}
+
+ul.top-menu li, a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+ul.top-menu li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+    background-color: #744e99;
+    border: 3px solid #744e99;
+}
+
+ul.top-menu {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* MAIN */
+
+/* aside */
+
+.aside-menu-block {
+    background: white;
+}
+
+ul.aside-menu li {
+    padding: 5px 15px 5px 80px;
+    list-style-type: none;
+}
+
+ul.aside-menu li a {
+    color: #744e99;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* section */
+
+main {
+    display: flex;
+    margin-top: 20px;
+}
+
+h2 {
+    color: white;
+    font-size: 45px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+}
+
+article.obj {
+    margin-top: 15px;
+}
+
+.obj-point li {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+article.obj {
+    margin-left: 50px;
+}
+
+ul.obj-point {
+    background: white;
+    padding: 0 50px 0 30px;
+    margin-top: 10px;
+}
+
+.obj-point-red {
+    background: white;
+    border: 3px solid red;
+}
+
+.obj-point-orange {
+    background: white;
+    border: 3px solid orange;
+}
+
+.obj-point-green {
+    background: white;
+    border: 3px solid green;
+}
+
+article.obj h3, p {
+    color: #744e99;
+}
+
+.submit-obj {
+    padding: 12px 20px;
+    background: #744e99;
+    border-radius: 6px;
+    border: 1px solid #744e99;
+    color: white;
+    margin-left: 25px;
+}
+
+ul.obj-point h3 {
+    font-size: 24px;
+}
+
+ul.obj-point p {
+    font-size: 18px;
+}
+
+/*CREATE OBJ*/
+
+/*form*/
+
+.form-block {
+    height: 300px;
+    width: 500px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+form.form-create-obj {
+    padding: 15px 20px 5px 20px;
+    margin-top: 0;
+}
+
+h3.h3-for-form {
+    color: #744e99;
+}
+
+.submit-btn button {
+    background: #744e99;
+    border: 1px #744e99 solid;
+}
